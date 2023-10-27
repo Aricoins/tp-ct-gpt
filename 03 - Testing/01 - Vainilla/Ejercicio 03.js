@@ -1,7 +1,22 @@
-//Los tests de esta function ya están creados, debes crear la function a partir de ellos utilizando a ChatGPT.
-
 function buscarPalabra(texto, palabra) {
-   // Tu implementación aquí
-}
-
-module.exports = buscarPalabra;
+   if (typeof texto !== 'string' || typeof palabra !== 'string' || palabra === '') {
+     return [];
+   }
+ 
+   const palabrasEnTexto = texto.split(' ');
+   const indices = [];
+ 
+   palabrasEnTexto.forEach((palabraEnTexto, indice) => {
+     const palabraNormalizada = palabraEnTexto.toLowerCase();
+     const palabraBuscadaNormalizada = palabra.toLowerCase();
+ 
+     if (palabraNormalizada.includes(palabraBuscadaNormalizada)) {
+       indices.push(indice);
+     }
+   });
+ 
+   return indices;
+ }
+ 
+ module.exports = buscarPalabra;
+ 

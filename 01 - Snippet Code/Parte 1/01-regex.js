@@ -3,10 +3,10 @@
 //  - Al menos 1 letra mayúscula y 1 minúscula
 //  - Al menos 1 número
 //  - Al menos 1 carácter especial
-
 function validarContraseña() {
-   let tuRegex; // Agrega tu regex
-   return tuRegex;
+   let tuRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-=_+{};':",.<>?/\\|]).{8,}$/;
+   return tuRegex
 }
 
 module.exports = validarContraseña;
+

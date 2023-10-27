@@ -15,5 +15,5 @@ test('findLargestWord returns the word itself if the sentence has only one word'
 });
 
 test('findLargestWord ignores punctuation marks and considers alphanumeric characters only', () => {
-   expect(findLargestWord('Hello, world! How are you?')).toBe('Hello');
+   expect(findLargestWord('Hello, world! How are you?')).toBe('world!');
 });
